@@ -1,0 +1,130 @@
+:root {
+  --main-color: #fcc600;
+  --sub-color: #0037fc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px;
+  text-align: center;
+}
+
+.player {
+  display: inline-block;
+  margin: 5rem 0;
+  position: relative;
+}
+
+video {
+  border-radius: 5px;
+}
+
+.controls {
+  position: absolute;
+  bottom: 200%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+input {
+  cursor: pointer;
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+#current {
+  width: 100%;
+  padding: 0.5rem 0;
+}
+
+#volume {
+  width: 30%;
+}
+
+#playback_rate {
+  width: 20%;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: var(--main-color);
+  height: 0.5rem;
+  border-radius: 5px;
+}
+
+input[type="range"]:hover::-webkit-slider-runnable-track {
+  height: 1rem;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+  transform: scale(1.2);
+  margin-top: -2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--sub-color);
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-top: -4px;
+  border-radius: 50%;
+  transform: scale(1);
+}
+
+input[type="range"]::-moz-range-track {
+  background: var(--main-color);
+  height: 0.5rem;
+  border-radius: 5px;
+}
+
+input[type="range"]:hover::-moz-slider-runnable-track {
+  height: 1rem;
+}
+
+input[type="range"]:hover::-moz-slider-thumb {
+  transform: scale(1.2);
+  margin-top: -2px;
+}
+
+input[type="range"]::-moz-slider-thumb {
+  -moz-appearance: none;
+  appearance: none;
+  margin-top: -4px;
+  background-color: var(--sub-color);
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  transform: scale(1);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.2);
+}
+
+button > span {
+  font-style: italic;
+  font-size: 1rem;
+}
+
+i {
+  font-size: 1.6rem;
+}
